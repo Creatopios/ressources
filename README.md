@@ -1,7 +1,6 @@
 # 📕 CRÉATOPIOS
 
-## Document de Conception Global
-
+Document de Conception Global
 *(Game Design Document + Spécifications Fonctionnelles)*
 
 ---
@@ -17,24 +16,21 @@ Ces créatures ne sont ni bonnes ni mauvaises : elles incarnent des forces brute
 
 ### 0.2 Les Éleveurs
 
-Les Éleveurs sont des êtres rares, capables de créer un **Lien** avec les Créatopiens.
-Ce lien ne permet pas de les contrôler totalement, mais d’orchestrer leur coopération sur le champ de bataille.
+Les **Éleveurs** sont des êtres rares, capables de créer un **Lien** avec les Créatopiens.
 
-Un Éleveur :
+* N’interviennent jamais physiquement
+* Ne sont jamais visibles
+* Agissent uniquement par stratégie et anticipation
 
-* n’intervient jamais physiquement
-* n’est jamais visible
-* agit uniquement par stratégie et anticipation
+Ils ne contrôlent pas directement les Créatopiens mais orchestrent leur coopération.
 
 ### 0.3 La Grande Confrontation
 
 Depuis la disparition de l’ancien Roi des Éleveurs, l’équilibre de Créatopios s’est fragilisé.
-Pour éviter l’effondrement du monde, les Éleveurs s’affrontent lors de **Confrontations de Liens**.
 
-Ces affrontements sont des épreuves stratégiques ritualisées destinées à désigner :
+Les Éleveurs s’affrontent lors de **Confrontations de Liens**, des épreuves stratégiques ritualisées destinées à désigner :
 
-* l’Éleveur dont la maîtrise des Créatopiens est la plus juste
-* 🏆 Le dernier Éleveur encore capable de maintenir un Lien devient le **Gardien de l’Équilibre**
+🏆 **Le nouvel Éleveur Gardien de l’Équilibre**
 
 ---
 
@@ -42,19 +38,20 @@ Ces affrontements sont des épreuves stratégiques ritualisées destinées à d�
 
 ### 1.1 Concept
 
-Créatopios est un jeu de **stratégie tactique au tour par tour**, sans hasard, jouable de 2 à 4 joueurs.
-Chaque joueur incarne un Éleveur qui dirige une équipe de Créatopiens sur une carte en grille.
+**Créatopios** est un jeu de stratégie tactique au tour par tour, **sans hasard**, jouable de **2 à 4 joueurs**.
 
-**Objectif :**
+Chaque joueur incarne un Éleveur dirigeant une équipe de Créatopiens sur une carte en grille.
+
+🎯 **Objectif** :
 Être le dernier Éleveur possédant au moins un Créatopien en jeu.
 
 ### 1.2 Piliers de Design
 
-* Zéro hasard
+* Zéro hasard (aucun RNG)
 * Information parfaite
 * Décisions irréversibles
 * Synergies d’équipe
-* Rythme maîtrisé (4 joueurs max)
+* Rythme maîtrisé (max 4 joueurs)
 
 ---
 
@@ -62,30 +59,30 @@ Chaque joueur incarne un Éleveur qui dirige une équipe de Créatopiens sur une
 
 ### 2.1 L’Éleveur
 
-* Pas de points de vie
-* Pas d’entité sur le plateau
+* N’a pas de points de vie
+* N’est pas une entité sur le plateau
 * Ne peut ni être ciblé, ni attaqué
 
-**Élimination :**
+**Élimination** :
 Un Éleveur est éliminé dès qu’il n’a plus aucun Créatopien sur le plateau.
 
 ### 2.2 Création et Gestion des Équipes
 
-* Maximum 8 équipes sauvegardées par Éleveur
+* Maximum **8 équipes** sauvegardées par Éleveur
 * Une seule équipe utilisée par partie
 
-**Budget de Recrutement :**
+**Budget de recrutement** :
 
-* Budget fixe : 10 points
-* 1 à 10 Créatopiens par équipe
-* Coût total ≤ 10
+* Budget fixe : **10 points**
+* **1 à 10 Créatopiens** par équipe
+* Le coût total ne peut jamais dépasser 10
 
 ### 2.3 Classes de Créatopiens
 
 | Classe               | Coût | PV | Force | Mobilité | Portée | Pouvoir                    |
 | -------------------- | ---- | -- | ----- | -------- | ------ | -------------------------- |
 | Garde de l’Écorce    | 3    | 15 | 2     | 2        | 1      | Régénère 1 PV              |
-| Armurion             | 3    | 13 | 3     | 1        | 1      | Ignore 1 dégât / tour      |
+| Armurion             | 3    | 13 | 3     | 1        | 1      | Ignore 1 dégât/tour        |
 | Archimage Végétal    | 3    | 5  | 4     | 2        | 3      | —                          |
 | Lanceur d’Éclairs    | 3    | 4  | 4     | 2        | 3      | Ignore obstacles           |
 | Esprit de la Cascade | 2    | 6  | 2     | 4        | 2      | Régénère 1 PV              |
@@ -101,15 +98,15 @@ Un Éleveur est éliminé dès qu’il n’a plus aucun Créatopien sur le plate
 
 | Taille   | Dimensions | Joueurs |
 | -------- | ---------- | ------- |
-| Petite   | 10 × 10    | 2       |
-| Standard | 14 × 14    | 2–3     |
-| Large    | 18 × 18    | 3–4     |
+| Petite   | 10×10      | 2       |
+| Standard | 14×14      | 2–3     |
+| Large    | 18×18      | 3–4     |
 
 ### 2.5 Système de Tour
 
-* 4 Points d’Action par Éleveur
+* 4 Points d’Action (PA) par Éleveur
 * PA non utilisés perdus
-* Actions : Déplacement / Attaque / Pouvoir (1 PA)
+* Actions (1 PA) : Déplacement / Attaque / Pouvoir
 
 ### 2.6 Combat
 
@@ -119,75 +116,136 @@ Un Éleveur est éliminé dès qu’il n’a plus aucun Créatopien sur le plate
 
 ### 2.7 Victoire
 
-🏆 Dernier Éleveur avec au moins un Créatopien en jeu.
+🏆 Dernier Éleveur avec au moins un Créatopien en jeu
 
 ---
 
-## 3. UI / UX — SCHÉMAS DES ÉCRANS
+## 3. UI / UX — ÉCRANS
 
 ### 3.1 Écran de Connexion
 
-```mermaid
-flowchart TD
-    A[CRÉATOPIOS] --> B[Pseudo]
-    A --> C[Mot de passe]
-    A --> D[Connexion]
-    A --> E[Créer un compte]
+```
++---------------------------+
+|        CRÉATOPIOS         |
+|                           |
+|  [ Pseudo ]               |
+|  [ Mot de passe ]         |
+|                           |
+|  ( Connexion )            |
+|  ( Créer un compte )      |
++---------------------------+
 ```
 
 ### 3.2 Menu Principal
 
-```mermaid
-flowchart TD
-    A[Joueur : Pseudo] --> B[Jouer]
-    A --> C[Mes Équipes]
-    A --> D[Amis]
-    A --> E[Statistiques]
-    A --> F[Classement]
-    A --> G[Paramètres]
+```
++----------------------------------+
+| Joueur : Pseudo                  |
+|----------------------------------|
+| ▶ Jouer                          |
+| ▶ Mes Équipes                    |
+| ▶ Amis                           |
+| ▶ Statistiques                   |
+| ▶ Classement                     |
+| ▶ Paramètres                     |
++----------------------------------+
 ```
 
-### 3.3 Gestion des Équipes
+### 3.3 Gestion & Création d’Équipe
 
-```mermaid
-flowchart TD
-    A[Mes Équipes (5/8)] --> B[Équipe Tanky (10)]
-    A --> C[Équipe Rush (9)]
-    A --> D[Équipe Mage (10)]
-    A --> E[+ Nouvelle Équipe]
+```
++--------------------------------------------------+
+| Nom de l’équipe : Équipe Rush                    |
+| Budget : 7 / 10                                  |
+|--------------------------------------------------|
+| Créatopiens sélectionnés :                       |
+| 1. Ombrelame (2)                                 |
+| 2. Voltigeur (1)                                 |
+|                                                  |
+| Liste complète :                                 |
+| [ + Garde de l'Écorce (3) ]                      |
+| [ + Ombrefeu (2) ]                               |
+| [ + Sylphide (2) ]                               |
+|                                                  |
+| [ Sauvegarder ]   [ Supprimer ]                  |
++--------------------------------------------------+
 ```
 
 ### 3.4 Création de Partie
 
-```mermaid
-flowchart TD
-    A[Créer une Partie] --> B[Joueurs 2-4]
-    A --> C[Carte : Petite / Standard / Large]
-    A --> D[Mode : Amical / Classé]
-    A --> E[Créer]
+```
++----------------------------------+
+| Créer une Partie                 |
+|----------------------------------|
+| Joueurs : 2 – 4                  |
+| Carte : Petite / Standard / Large|
+| Mode : Amical / Classé           |
+| [ Créer ]                        |
++----------------------------------+
 ```
 
 ### 3.5 Lobby
 
-```mermaid
-flowchart TD
-    A[Lobby – Carte : Standard] --> B[Pseudo1 ✔]
-    A --> C[Pseudo2 ⏳]
-    A --> D[Chat > Prêt ?]
-    A --> E[Inviter]
-    A --> F[Lancer]
+```
++----------------------------------+
+| Lobby – Carte : Standard         |
+|----------------------------------|
+| Joueurs :                        |
+| Pseudo1 ✔                        |
+| Pseudo2 ⏳                       |
+|----------------------------------|
+| Chat                             |
+| > Prêt ?                         |
+|----------------------------------|
+| [ Inviter ] [ Lancer ]           |
++----------------------------------+
 ```
 
-### 3.6 Interface de Jeu
+### 3.6 Terrain de Jeu (Canvas)
 
-```mermaid
-flowchart TD
-    A[Tour : Pseudo2 PA : 3/4] --> B[CARTE (GRILLE)]
-    B --> C[Sélection : Ombrefeu]
-    C --> D[PV : 6/6 Mobilité : 6]
-    D --> E[Déplacer]
-    D --> F[Attaquer]
-    D --> G[Pouvoir]
+Plateau central **15×15** (P) avec **zones de déploiement hors terrain** pour chaque joueur.
+
+```
+                                   +----+----+----+----+----+
+                                   | J1 | J1 | J1 | J1 | J1 |
+                                   +----+----+----+----+----+
+                                   | J1 | J1 | J1 | J1 | J1 |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| J3 | J3 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | J4 | J4 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| J3 | J3 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | J4 | J4 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| J3 | J3 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | J4 | J4 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| J3 | J3 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | J4 | J4 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+| J3 | J3 |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | J4 | J4 |
++----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+          |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+          +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+                                   | J2 | J2 | J2 | J2 | J2 |
+                                   +----+----+----+----+----+
+                                   | J2 | J2 | J2 | J2 | J2 |
+                                   +----+----+----+----+----+
+
 ```
 
 ---
@@ -208,14 +266,14 @@ flowchart TD
 
 ### 4.3 Chat
 
-* Chat lobby
-* Chat en partie
+* Lobby
+* En partie
 * Désactivable en classé
 
 ### 4.4 Statistiques
 
-* Joueur : Parties jouées, Victoires, Taux de victoire, Temps moyen
-* Équipes : Parties jouées, Victoires, Performances par créature
+**Joueur** : parties, victoires, taux, temps moyen
+**Équipes** : performances par créature
 
 ### 4.5 Classement
 
@@ -230,67 +288,23 @@ flowchart TD
 ### 5.1 Joueur
 
 ```json
-{
-  "id": "player_id",
-  "pseudo": "string",
-  "avatar": "string",
-  "teams": ["team_id"],
-  "stats": {}
-}
+{ "id": "player_id", "pseudo": "string", "avatar": "string", "teams": ["team_id"], "stats": {} }
 ```
 
 ### 5.2 Équipe
 
 ```json
-{
-  "id": "team_id",
-  "name": "string",
-  "budget": 10,
-  "creatopiens": ["creatopien_id"],
-  "stats": {}
-}
+{ "id": "team_id", "name": "string", "budget": 10, "creatopiens": ["creatopien_id"], "stats": {} }
 ```
 
 ### 5.3 Créatopien
 
 ```json
-{
-  "id": "creatopien_id",
-  "type": "Ombrefeu",
-  "pv_max": 6,
-  "pv_current": 6,
-  "force": 3,
-  "mobilite": 6,
-  "portee": 2,
-  "capacites": []
-}
+{ "id": "creatopien_id", "type": "Ombrefeu", "pv_max": 6, "pv_current": 6, "force": 3, "mobilite": 6, "portee": 2, "capacites": [] }
 ```
 
 ### 5.4 Partie
 
 ```json
-{
-  "id": "match_id",
-  "players": ["player_id"],
-  "map": {
-    "width": 14,
-    "height": 14
-  },
-  "state": "en_cours",
-  "turn": "player_id"
-}
+{ "id": "match_id", "players": ["player_id"], "map": { "width": 15, "height": 15 }, "state": "en_cours", "turn": "player_id" }
 ```
-
----
-
-## 6. POSITIONNEMENT DU JEU
-
-Créatopios se positionne comme :
-
-* un jeu tactique pur
-* accessible mais exigeant
-* orienté compétition réfléchie
-* sans RNG frustrant
-
-✅ **Conclusion**
-Un univers clair, un cadre narratif fort, un jeu mécaniquement solide, prêt pour dev, pitch ou financement.
