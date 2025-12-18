@@ -98,9 +98,9 @@ Un Éleveur est éliminé dès qu’il n’a plus aucun Créatopien sur le plate
 
 | Taille   | Dimensions | Joueurs |
 | -------- | ---------- | ------- |
-| Petite   | 10×10      | 2       |
-| Standard | 14×14      | 2–3     |
-| Large    | 18×18      | 3–4     |
+| Petite   | 15×15      | 2       |
+| Standard | 19×19      | 2–3     |
+| Large    | 23×23      | 3–4     |
 
 ### 2.5 Système de Tour
 
